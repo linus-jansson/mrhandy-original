@@ -1,0 +1,10 @@
+"```\ncss
+Showing " +commandsFound+ " commands
+```
+**1. Core -** `test1` `test2` `test3` `test4` `test5` `test6`
+**2. Fun -** `test1` `test2` `test3` `test4` `test5` `test6`
+**3. Moderation -** `test1` `test2` `test3` `test4` `test5` `test6`
+
+```Markdown
+#Do "+ config.prefix +"help [command] to get information about how to use a specific command\n ex: "+ config.prefix +"help info
+```"

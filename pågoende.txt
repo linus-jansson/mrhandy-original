@@ -1,0 +1,52 @@
+if (!message.member.hasPermission("MUTE_MEMBERS")) {
+  return message.reply(error.noPerm);
+} else {
+  // +Bot lock @user [reason]
+  if (args[0] === "lock") {
+
+    if (!botAccess) return message.reply("Couldn't find user.");
+    if (botAccess.hasPermission("MANAGE_MESSAGES")) return message.reply("Can't lock that user!");
+
+    let botAccessRole = message.guild.roles.find(`name`, "botLock");
+    if (!botAccessRole) {
+      try {
+        botAccessRole = await message.guild.createRole({
+          name: "botLock",
+          color: "#000000",
+          permissions: []
+        })
+        message.guild.channels.forEach(async (channel, id) => {
+          await channel.overwritePermissions(botAccessRole);
+        });
+      } catch (e) {
+        console.log(e.stack);
+      }
+
+      let reason = args.slice(2).join(' ');
+      if (!reason) reason = "No reason provided";
+
+      let lockEmbed = new Discord.RichEmbed()
+        .setDescription("~BotLock~")
+        .setColor("#bc0000")
+        .addField("Locked User", `${message.guild.botAccess.user} with ID ${message.guild.botAccess.id}`)
+        .addField("Locked By", `<@${message.author.id}> with ID ${message.author.id}`)
+        .addField("Locked In", message.channel)
+        .addField("Reason", reason);
+
+      return message.channel.send(lockEmbed);
+    }
+
+  } else if (args[0] === "unlock") {
+    if (!botAccess) return message.reply("Couldn't find user.");
+
+    let botAccessRole = message.guild.roles.find(`name`, "botLock");
+    botAccess.removeRole(botAccessRole).catch(console.error);
+
+    let unlockEmbed = new Discord.RichEmbed()
+      .setDescription(`**Unclocked ${botAccess}!**`)
+      .setColor("#00ff00");
+
+
+    return message.channel.send(unlockEmbed);
+  }
+}

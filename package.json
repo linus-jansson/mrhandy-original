@@ -1,0 +1,36 @@
+{
+  "name": "mrhandy",
+  "version": "1.0.0",
+  "description": "A lovley bot to help you with your needs",
+  "main": "index.js",
+  "nodemonConfig": {
+    "ignore": [
+      "prefixes.json"
+    ]
+  },
+  "scripts": {
+    "test": "help"
+  },
+  "repository": {
+    "type": "git",
+    "url": "none"
+  },
+  "keywords": [
+    "none"
+  ],
+  "author": "Linus J",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^11.3.2",
+    "fs": "0.0.1-security",
+    "get-youtube-id": "^1.0.0",
+    "got": "^8.3.2",
+    "http": "0.0.0",
+    "ms": "^2.1.1",
+    "mysql": "^2.15.0",
+    "request": "^2.87.0",
+    "snekfetch": "^4.0.4",
+    "youtube-info": "^1.2.1",
+    "ytdl-core": "^0.20.4"
+  }
+}

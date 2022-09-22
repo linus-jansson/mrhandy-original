@@ -1,0 +1,25 @@
+
+`**User Commands**
++ping = will make the bot tell the ping
+
+**Admin commands**
++ban @player [REASON] = ban the player
++kick @player [REASON] = kick player from server
++purge 2-100 = Will delete any messages sent from 2-100
++say [TEXT] = Will make the bot say something and delete your message
+`
+
+`=============\nUser Commands: \n +ping = will make the bot tell the ping \n=============\nAdmin commands: \n +ban @player [REASON] = ban the player \n +kick @player [REASON] = kick player from server \n +purge 2-100 = Will delete any messages sent from 2-100 \n +say [TEXT] = Will make the bot say something and delete your message \n=============\n`
+
+
+                          ("`=======================================`"+
+                          "\nUser Commands:"+
+                          "\n `+ping = will make the bot tell the ping"+
+                          "\n=======================================`"+
+                          "\nAdmin commands:"+
+                          "\n `+ban @player [REASON] = ban the player"+
+                          "\n +kick @player [REASON] = kick player from server"+
+                          "\n +purge 2-100 = Will delete any messages sent from 2-100"+
+                          "\n +say [TEXT] = Will make the bot say something and delete your message"+
+                          "\n=======================================`"+
+                          "\n**Please check out the developer of the bot's website: https://www.swedcraft.net**")

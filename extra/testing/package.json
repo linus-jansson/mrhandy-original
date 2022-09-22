@@ -1,0 +1,15 @@
+{
+  "name": "Mr Handy",
+  "version": "1.0.0",
+  "description": "A lovley robot that will help you with your needs :)",
+  "main": "app.js",
+  "author": "Linus J",
+  "dependencies": {
+    "discord.io": "github:woor/discord.io#gateway_v6",
+    "discord.js": "^11.3.2",
+    "discord.js-commando": "^0.10.0",
+    "mysql": "^2.15.0",
+    "snekfetch": "^4.0.4",
+    "winston": "^3.0.0"
+  }
+}
